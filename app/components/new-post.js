@@ -10,7 +10,7 @@ export default Ember.Component.extend({
     var params = {
       title: this.get('title'),
       body: this.get('body'),
-      image: this.get('image'),
+      image: this.get('image') ? this.get('image') : "",
     };
     this.set('newPostForm', false);
     this.sendAction('save2', params);
