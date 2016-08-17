@@ -4,6 +4,12 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'blog',
     environment: environment,
+    firebase: {
+    apiKey: 'AIzaSyB1FjXjL61VhzHCN_2nBFbKjvVVcvMQVVM',
+    authDomain: 'blog-d8eb2.firebaseapp.com',
+    databaseURL: 'https://blog-d8eb2.firebaseio.com',
+    storageBucket: 'blog-d8eb2.appspot.com',
+  },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

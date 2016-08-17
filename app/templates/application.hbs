@@ -1,6 +1,8 @@
 <div class="container">
   <header class="jumbotron">
     <h1>Blog</h1>
+    {{#link-to 'index'}}Home Page{{/link-to}}
+    
   </header>
   {{outlet}}
   <footer>{{#link-to 'contact'}}Contact Us{{/link-to}}
