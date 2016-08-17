@@ -1,0 +1,25 @@
+{{#if updatePostForm}}
+<h3>Update {{post.title}}</h3>
+<div >
+  <form>
+    <div class="form-control">
+      <label for="title">Title</label>
+        {{input value=title id="title"}}
+    </div>
+    <br>
+    <div class="form-control">
+      <label for="body">Body</label>
+        {{textarea value=body id="body"}}
+    </div>
+    <br>
+    <div class="form-control">
+      <label for="image">Picture</label>
+        {{input value=image id="image"}}
+    </div>
+    <br>
+    <button {{action 'update' post}}>Save Post</button>
+  </form>
+</div>
+{{else}}
+<button {{action 'updatePostForm'}}>Update</button>
+{{/if}}
