@@ -1,14 +1,19 @@
-<!-- {{#if newPostForm}}
+{{#if newPostForm}}
   <div>
     <form>
       <div class="form-control">
-        <label for="title"></label>
+        <label for="title">Title</label>
           {{input value=title id="title"}}
       </div>
+      <br>
       <div class="form-control">
-        <label for="post"></label>
-          {{input value=title id="title"}}
+        <label for="body">Body</label>
+          {{textarea value=body id="body"}}
       </div>
+      <br>
+      <button {{action 'save1'}}>Save Post</button>
     </form>
   </div>
-{{/if}} -->
+  {{else}}
+  <button {{action 'newPostFormShow'}}>New Post</button>
+{{/if}}
