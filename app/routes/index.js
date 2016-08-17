@@ -1,8 +1,8 @@
-import Ember from 'ember';
-
+import Ember from 'ember'
 export default Ember.Route.extend({
   model(){
-    return this.store.findAll('post');
+    var posts = this.store.findAll('post');
+    return posts;
   },
   actions: {
     save3(params) {
