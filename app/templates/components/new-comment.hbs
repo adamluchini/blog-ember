@@ -1,0 +1,19 @@
+{{#if newCommentForm}}
+  <div>
+    <form>
+      <div>
+        <label for="name">Name</label>
+          {{input value=name id="name"}}
+      </div>
+      <br>
+      <div>
+        <label for="commentPost">Comment</label>
+          {{textarea value=commentPost id="commentPost"}}
+      </div>
+      <br>
+      <button {{action 'commentSave1'}}>Save Comment</button>
+    </form>
+  </div>
+  {{else}}
+  <button {{action 'newCommentFormShow'}}>New Comment</button>
+{{/if}}

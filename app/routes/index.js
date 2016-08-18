@@ -1,11 +1,7 @@
 import Ember from 'ember';
 export default Ember.Route.extend({
   model(){
-    return Ember.RSVP.hash({
-      posts: this.store.findAll('post'),
-      comments: this.store.findAll('comment')
-    });
-
+    return this.store.findAll('post');
   },
   actions: {
     save3(params) {
