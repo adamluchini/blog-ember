@@ -1,4 +1,6 @@
-<h2>{{post.title}}</h2>
-{{post-details post=model destroyPost="destroyPost"}}
-{{update-post post=model update="update"}}
+<h2>{{model.post.title}}</h2>
+{{post-details post=model.post destroyPost="destroyPost"}}
+{{update-post post=model.post update="update"}}
 {{new-comment commentSave2="commentSave3"}}
+
+{{comment-tile comments=model.comments}}

@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     commentSave1() {
       var commentParams = {
         name: this.get('name'),
-        commentPost: this.get('commentPost')
+        commentPost: this.get('commentPost'),
       };
       this.set('newCommentForm', false);
       this.sendAction('commentSave2', commentParams);

@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params){
-    return this.store.findRecord('post', params.post_id);
+    return Ember.RSVP.hash({
+      post: this.store.findRecord('post', params.post_id),
+      comments: this.store.findAll('comment')
+    });
   },
   actions: {
     update(post, params){
@@ -18,10 +21,15 @@ export default Ember.Route.extend({
       post.destroyRecord();
       this.transitionTo('index');
     },
+
     commentSave3(commentParams) {
-      var newComment = this.store.createRecord('comment', commentParams);
-      newComment.save();
-      this.transitionTo('index');
-    },
+    var newComment =  this.store.createRecord('comment', commentParams);
+    console.log(commentParams);
+    console.log(commentParams.commentPost);
+
+    newComment.save();
+
+      this.transitionTo('post');
+    }
   }
 });
