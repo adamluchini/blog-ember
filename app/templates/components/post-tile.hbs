@@ -1,9 +1,3 @@
 <li>
-{{post.title}}
-<br>
-<p><img src={{post.image}}></p>
-<br>
-{{post.body}}
-{{update-post post=post update="update"}}
-<button {{action 'delete' post}}>Delete Post</button>
+{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}
 </li>

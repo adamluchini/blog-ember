@@ -1,10 +1,19 @@
 <h2>Welcome</h2>
 
 <ul>
-  {{#each model as |post|}}
+  {{#each model.posts as |post|}}
 
-  {{post-tile post=post update="update" destroyPost="destoryPost"}}
+  {{post-tile post=post}}
   {{/each}}
 </ul>
 
 {{new-post save2="save3"}}
+
+<ul>
+  {{#each model.comments as |comment|}}
+
+  {{comment-tile comment=comment}}
+  <li>{{comment.name}}</li>
+  <li>{{comment.commentPost}}</li>
+  {{/each}}
+</ul>
